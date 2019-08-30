@@ -19,3 +19,7 @@ class Account:
         This function allows users accounts to be saved
         '''
         Account.accounts_list.append(self)
+
+    def delete_account(self):
+
+        Account.accounts_list.remove(self)

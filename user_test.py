@@ -41,6 +41,13 @@ class TestUser (unit.TestCase):
         account_2.save_account()
         self.assertEqual(len(ac.accounts_list),2)
 
+    def test_delete_account(self):
+        '''
+        This functions tests whether a user can delete an account
+        '''
+        self.new_account.save_account()
+        self.new_account.delete_account()
+        self.assertEqual(len(ac.accounts_list),0)
 
 if __name__ == '__main__':
     unit.main()
