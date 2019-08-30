@@ -1,4 +1,4 @@
-from user import account as ac
+from user import Account as ac
 import unittest as unit
 
 class TestUser (unit.TestCase):
@@ -19,6 +19,12 @@ class TestUser (unit.TestCase):
         self.assertEqual(self.new_account.email,"john@gmail.com")
         self.assertEqual(self.new_account.password,"12johnDoes34")
 
+    def test_save_account(self):
+        '''
+        This function test whether an account is being saved
+        '''
+        self.new_account.save_account()
+        self.assertEqual(len(ac.accounts_list),1)
 
 if __name__ == '__main__':
     unit.main()
