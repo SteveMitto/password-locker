@@ -49,5 +49,11 @@ class TestUser (unit.TestCase):
         self.new_account.delete_account()
         self.assertEqual(len(ac.accounts_list),0)
 
+    def test_display_accounts(self):
+        '''
+        This function test displays all the accounts
+        '''
+        self.assertEqual(ac.display_accounts(),ac.accounts_list)
+
 if __name__ == '__main__':
     unit.main()

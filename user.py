@@ -23,3 +23,10 @@ class Account:
     def delete_account(self):
 
         Account.accounts_list.remove(self)
+
+    @classmethod
+    def display_accounts(cls):
+        '''
+        This function displays all the accounts
+        '''
+        return cls.accounts_list
