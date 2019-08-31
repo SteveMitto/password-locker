@@ -13,3 +13,10 @@ class cridentials:
         self.username = username
         self.email = email
         self.password = password
+
+    def save_cridentials(self,app):
+        '''
+        This function allows saving of cridentials
+        '''
+        cridentials.social_accounts[app].append(self)
+        
