@@ -8,6 +8,8 @@ class TestCridentials(unit.TestCase) :
     def setUp(self):
 
         self.cridentials = cri("Steve Mitto","mitto@gmail.com","1234567")
+        self.apps=['instagram','twitter','facebook','linkedin','snapchat']
+
 
     def test_init(self):
         '''
@@ -21,11 +23,27 @@ class TestCridentials(unit.TestCase) :
         '''
         This function test for saving of cridentials and passwords
         '''
-        apps=['instagram','twitter','facebook','linkedin','snapchat']
-
-        for app in apps:
+        for app in self.apps:
             self.cridentials.save_cridentials(app)
             self.assertEqual(len(cri.social_accounts[app]),1)
+
+    def tearDown(self):
+        '''
+        '''
+        for app in self.apps:
+            cri.social_accounts[app]= []
+            return True
+
+
+    def test_delete_cridentials(self):
+        '''
+        This function tests whether a user can delete cridentials
+        '''
+        for app in self.apps:
+            self.cridentials.save_cridentials(app)
+            self.cridentials.delete_cridentials(app)
+            self.assertEqual(len(cri.social_accounts[app]),0)
+
 
 
 if __name__ == '__main__':

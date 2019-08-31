@@ -19,4 +19,9 @@ class cridentials:
         This function allows saving of cridentials
         '''
         cridentials.social_accounts[app].append(self)
-        
+
+    def delete_cridentials(self,app):
+        '''
+        This function allows deletion of cridentials
+        '''
+        cridentials.social_accounts[app].remove(self)
