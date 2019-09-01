@@ -57,8 +57,8 @@ def main():
                 while True :
                     print(f"""Welcome {acc.accounts_list[0].first_name} please select the account cridentials that you want to fill by using the following keys
                 ig - Instagram          twi - Twitter          fb - Facebook
-                li - Linked In          snap - SnapChat        gm - Gmail
-                                        yh - Yahoo
+                li - Linked In          snap - SnapChat        git - github
+                            gm - Gmail                 yh - Yahoo
                     """)
                     res = input()
 
@@ -68,7 +68,119 @@ def main():
                         email = input(" ... Email ...\n")
                         pwd = input("Do you want a generated password or not\n (y/n)")
                         if pwd.lower() == "y":
-                            length = int(input("specify lenght\n"))
+                            length = int(input("specify length\n"))
+                            print(f"Your Password is {generate_password(username,length)}")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                        else :
+                            password =getpass.getpass(" ...Enter a Password ...\n")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                    if res == 'twi':
+                        app="twitter"
+                        username = input(" ... Username ... \n")
+                        email = input(" ... Email ...\n")
+                        pwd = input("Do you want a generated password or not\n (y/n)")
+                        if pwd.lower() == "y":
+                            length = int(input("specify length\n"))
+                            print(f"Your Password is {generate_password(username,length)}")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                        else :
+                            password =getpass.getpass(" ...Enter a Password ...\n")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                    if res == 'fb':
+                        app="facebook"
+                        username = input(" ... Username ... \n")
+                        email = input(" ... Email ...\n")
+                        pwd = input("Do you want a generated password or not\n (y/n)")
+                        if pwd.lower() == "y":
+                            length = int(input("specify length\n"))
+                            print(f"Your Password is {generate_password(username,length)}")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                        else :
+                            password =getpass.getpass(" ...Enter a Password ...\n")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                    if res == 'li':
+                        app="linkedin"
+                        username = input(" ... Username ... \n")
+                        email = input(" ... Email ...\n")
+                        pwd = input("Do you want a generated password or not\n (y/n)")
+                        if pwd.lower() == "y":
+                            length = int(input("specify length\n"))
+                            print(f"Your Password is {generate_password(username,length)}")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                        else :
+                            password =getpass.getpass(" ...Enter a Password ...\n")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                    if res == 'snap':
+                        app="snapchat"
+                        username = input(" ... Username ... \n")
+                        email = input(" ... Email ...\n")
+                        pwd = input("Do you want a generated password or not\n (y/n)")
+                        if pwd.lower() == "y":
+                            length = int(input("specify length\n"))
+                            print(f"Your Password is {generate_password(username,length)}")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                        else :
+                            password =getpass.getpass(" ...Enter a Password ...\n")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                    if res == 'git':
+                        app="github"
+                        username = input(" ... Username ... \n")
+                        email = input(" ... Email ...\n")
+                        pwd = input("Do you want a generated password or not\n (y/n)")
+                        if pwd.lower() == "y":
+                            length = int(input("specify length\n"))
+                            print(f"Your Password is {generate_password(username,length)}")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                        else :
+                            password =getpass.getpass(" ...Enter a Password ...\n")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                    if res == 'gm':
+                        app="gmail"
+                        username = input(" ... Username ... \n")
+                        email = input(" ... Email ...\n")
+                        pwd = input("Do you want a generated password or not\n (y/n)")
+                        if pwd.lower() == "y":
+                            length = int(input("specify length\n"))
+                            print(f"Your Password is {generate_password(username,length)}")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                        else :
+                            password =getpass.getpass(" ...Enter a Password ...\n")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                    if res == 'yh':
+                        app="yahoo"
+                        username = input(" ... Username ... \n")
+                        email = input(" ... Email ...\n")
+                        pwd = input("Do you want a generated password or not\n (y/n)")
+                        if pwd.lower() == "y":
+                            length = int(input("specify length\n"))
                             print(f"Your Password is {generate_password(username,length)}")
                             save_cridentials(create_cridentials(username,email,password),app)
                             print(f"__________{app.capitalize()} cridentials added__________")
