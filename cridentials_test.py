@@ -34,7 +34,6 @@ class TestCridentials(unit.TestCase) :
         '''
         for app in self.apps:
             cri.social_accounts[app]= []
-            return True
 
 
     def test_delete_cridentials(self):
@@ -53,5 +52,12 @@ class TestCridentials(unit.TestCase) :
         self.cridentials.save_cridentials("instagram")
         self.assertNotEqual(cri.social_accounts["instagram"][0].password,cri.generate_password("John",9))
 
+    def test_display_cridentials(self):
+        '''
+        This function tests for display of new_cridentials
+        '''
+        for app in self.apps:
+            self.cridentials.save_cridentials(app)
+            self.assertEqual(cri.social_accounts[app][0],cri.show_cridentials(app,0))
 if __name__ == '__main__':
     unit.main()

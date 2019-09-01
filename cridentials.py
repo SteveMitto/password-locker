@@ -37,3 +37,9 @@ class cridentials:
         num=str(number)
         final = num.join(target)
         return final
+    @classmethod
+    def show_cridentials(cls,app,len):
+        '''
+        This function gets cridentials
+        '''
+        return cls.social_accounts[app][len]
