@@ -1,5 +1,6 @@
 import pyperclip
-
+import random
+from user import Account as acc
 class cridentials:
     '''
     This class
@@ -25,3 +26,19 @@ class cridentials:
         This function allows deletion of cridentials
         '''
         cridentials.social_accounts[app].remove(self)
+
+    def generate_password(names,length):
+        '''
+        This function generates a password
+        '''
+        target =list(names)
+        random.shuffle(target)
+        number=random.randint(0,length+1)
+        num=str(number)
+        final = num.join(target)
+        while len(final) < length :
+            number=random.randint(0,length+1)
+            num=str(number)
+            final = num.join(target)
+        else:
+            return final

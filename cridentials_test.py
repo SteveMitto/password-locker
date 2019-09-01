@@ -1,5 +1,7 @@
 from cridentials import cridentials as cri
 import unittest as unit
+from user import Account as acc
+
 
 class TestCridentials(unit.TestCase) :
     '''
@@ -9,7 +11,7 @@ class TestCridentials(unit.TestCase) :
 
         self.cridentials = cri("Steve Mitto","mitto@gmail.com","1234567")
         self.apps=['instagram','twitter','facebook','linkedin','snapchat']
-
+        self.new_account = acc("John","Doe","john@gmail.com","12johnDoes34","12johnDoes34")
 
     def test_init(self):
         '''
@@ -44,7 +46,12 @@ class TestCridentials(unit.TestCase) :
             self.cridentials.delete_cridentials(app)
             self.assertEqual(len(cri.social_accounts[app]),0)
 
-
+    def test_generate_password(self):
+        '''
+        This Function tests whether the app can generate a passwords
+        '''
+        self.cridentials.save_cridentials("instagram")
+        self.assertNotEqual(cri.social_accounts["instagram"][0].password,cri.generate_password("John",9))
 
 if __name__ == '__main__':
     unit.main()
