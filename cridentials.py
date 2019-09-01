@@ -33,11 +33,11 @@ class cridentials:
         '''
         target =list(names)
         random.shuffle(target)
-        number=random.randint(0,length+1)
+        number=random.randint(0,length)
         num=str(number)
         final = num.join(target)
         while len(final) < length :
-            number=random.randint(0,length+1)
+            number=random.randint(0,length)
             num=str(number)
             final = num.join(target)
         else:

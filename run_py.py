@@ -23,10 +23,16 @@ def create_cridentials(username,email,password):
 
 def save_cridentials(cridential,app):
     '''
-    This commit allows users to save their cridentials
+    This function allows users to save their cridentials
     '''
     cridential.save_cridentials(app)
 
+def generate_password(name,length):
+    '''
+    This function allows auto generation of password
+    '''
+    pwd = cri.generate_password(name,length)
+    return pwd[0:length]
 
 def main():
     '''
@@ -55,14 +61,22 @@ def main():
                                         yh - Yahoo
                     """)
                     res = input()
+
                     if res == 'ig':
                         app="instagram"
                         username = input(" ... Username ... \n")
                         email = input(" ... Email ...\n")
-                        # pwd = input("Do you want a generated password or not\n (y/n)")
-                        password =getpass.getpass(" ... Password ...\n")
-                        save_cridentials(create_cridentials(username,email,password),app)
-                        print(cri.social_accounts["instagram"][0].password)
+                        pwd = input("Do you want a generated password or not\n (y/n)")
+                        if pwd.lower() == "y":
+                            length = int(input("specify lenght\n"))
+                            print(f"Your Password is {generate_password(username,length)}")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
+
+                        else :
+                            password =getpass.getpass(" ...Enter a Password ...\n")
+                            save_cridentials(create_cridentials(username,email,password),app)
+                            print(f"__________{app.capitalize()} cridentials added__________")
         else:
             print("________________________________invalid responce________________________________")
 if __name__ == "__main__":
