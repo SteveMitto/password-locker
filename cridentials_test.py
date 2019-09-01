@@ -10,7 +10,7 @@ class TestCridentials(unit.TestCase) :
     def setUp(self):
 
         self.cridentials = cri("Steve Mitto","mitto@gmail.com","1234567")
-        self.apps=['instagram','twitter','facebook','linkedin','snapchat']
+        self.apps=['instagram','twitter','facebook','linkedin','snapchat','gmail','github','yahoo']
         self.new_account = acc("John","Doe","john@gmail.com","12johnDoes34","12johnDoes34")
 
     def test_init(self):

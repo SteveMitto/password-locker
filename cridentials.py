@@ -5,7 +5,7 @@ class cridentials:
     '''
     This class
     '''
-    social_accounts={'instagram':[],'twitter':[],'facebook':[],'linkedin':[],'snapchat':[]}
+    social_accounts={'instagram':[],'twitter':[],'facebook':[],'linkedin':[],'snapchat':[],'gmail':[],'github':[],'yahoo':[]}
 
     def __init__(self,username,email,password):
         '''
@@ -36,9 +36,4 @@ class cridentials:
         number=random.randint(0,length)
         num=str(number)
         final = num.join(target)
-        while len(final) < length :
-            number=random.randint(0,length)
-            num=str(number)
-            final = num.join(target)
-        else:
-            return final
+        return final
