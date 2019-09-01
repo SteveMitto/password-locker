@@ -34,6 +34,13 @@ def generate_password(name,length):
     pwd = cri.generate_password(name,length)
     return pwd[0:length]
 
+def display_cridentials(app,lenght):
+    '''
+    This function displays cridentials
+    '''
+    res=cri.show_cridentials(app,len)
+    return res
+
 def main():
     '''
     This is the body of the function
@@ -59,6 +66,8 @@ def main():
                 ig - Instagram          twi - Twitter          fb - Facebook
                 li - Linked In          snap - SnapChat        git - github
                             gm - Gmail                 yh - Yahoo
+                    !!To show cridentials add 's' at the end of each initials!!
+                            Example for Twiter type 'twits'
                     """)
                     res = input()
 
@@ -189,7 +198,142 @@ def main():
                             password =getpass.getpass(" ...Enter a Password ...\n")
                             save_cridentials(create_cridentials(username,email,password),app)
                             print(f"__________{app.capitalize()} cridentials added__________")
-        else:
+
+                    if res == 'igs':
+                        password = getpass.getpass("Please Enter your password to see cridentials\n")
+                        if password != acc.accounts_list[0].password:
+                            print("\n\n\t\t\tIncorrect Password Please try again\n\n")
+
+                        else:
+                            app = "instagram"
+                            length = len(cri.social_accounts[app])
+                            if length == 0:
+                                print(f"\t\tYou have no {app.capitalize()} cridentials\n\n")
+                            else :
+                                print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
+                                for i in range(length):
+                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+
+                    if res == 'twis':
+                        password = getpass.getpass("Please Enter your password to see cridentials\n")
+                        if password != acc.accounts_list[0].password:
+                            print("\n\n\t\t\tIncorrect Password Please try again\n\n")
+
+                        else:
+                            app = "twitter"
+                            length = len(cri.social_accounts[app])
+                            if length == 0:
+                                print(f"\t\tYou have no {app.capitalize()} cridentials\n\n")
+                            else :
+                                print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
+                                for i in range(length):
+                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+
+                    if res == 'fbs':
+                        password = getpass.getpass("Please Enter your password to see cridentials\n")
+                        if password != acc.accounts_list[0].password:
+                            print("\n\n\t\t\tIncorrect Password Please try again\n\n")
+
+                        else:
+                            app = "facebook"
+                            length = len(cri.social_accounts[app])
+                            if length == 0:
+                                print(f"\t\tYou have no {app.capitalize()} cridentials\n\n")
+                            else :
+                                print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
+                                for i in range(length):
+                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+
+                    if res == 'lis':
+                        password = getpass.getpass("Please Enter your password to see cridentials\n")
+                        if password != acc.accounts_list[0].password:
+                            print("\n\n\t\t\tIncorrect Password Please try again\n\n")
+
+                        else:
+                            app = "linkedin"
+                            length = len(cri.social_accounts[app])
+                            if length == 0:
+                                print(f"\t\tYou have no {app.capitalize()} cridentials\n\n")
+                            else :
+                                print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
+                                for i in range(length):
+                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+
+                    if res == 'snaps':
+                        password = getpass.getpass("Please Enter your password to see cridentials\n")
+                        if password != acc.accounts_list[0].password:
+                            print("\n\n\t\t\tIncorrect Password Please try again\n\n")
+
+                        else:
+                            app = "snapchat"
+                            length = len(cri.social_accounts[app])
+                            if length == 0:
+                                print(f"\t\tYou have no {app.capitalize()} cridentials\n\n")
+                            else :
+                                print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
+                                for i in range(length):
+                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+
+                    if res == 'gits':
+                        password = getpass.getpass("Please Enter your password to see cridentials\n")
+                        if password != acc.accounts_list[0].password:
+                            print("\n\n\t\t\tIncorrect Password Please try again\n\n")
+
+                        else:
+                            app = "github"
+                            length = len(cri.social_accounts[app])
+                            if length == 0:
+                                print(f"\t\tYou have no {app.capitalize()} cridentials\n\n")
+                            else :
+                                print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
+                                for i in range(length):
+                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+
+                    if res == 'gms':
+                        password = getpass.getpass("Please Enter your password to see cridentials\n")
+                        if password != acc.accounts_list[0].password:
+                            print("\n\n\t\t\tIncorrect Password Please try again\n\n")
+
+                        else:
+                            app = "gmail"
+                            length = len(cri.social_accounts[app])
+                            if length == 0:
+                                print(f"\t\tYou have no {app.capitalize()} cridentials\n\n")
+                            else :
+                                print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
+                                for i in range(length):
+                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+
+                    if res == 'yhs':
+                        password = getpass.getpass("Please Enter your password to see cridentials\n")
+                        if password != acc.accounts_list[0].password:
+                            print("\n\n\t\t\tIncorrect Password Please try again\n\n")
+
+                        else:
+                            app = "yahoo"
+                            length = len(cri.social_accounts[app])
+                            if length == 0:
+                                print(f"\t\tYou have no {app.capitalize()} cridentials\n\n")
+                            else :
+                                print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
+                                for i in range(length):
+                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
             print("________________________________invalid responce________________________________")
 if __name__ == "__main__":
     main()

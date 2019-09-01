@@ -42,4 +42,4 @@ class cridentials:
         '''
         This function gets cridentials
         '''
-        return cls.social_accounts[app][len]
+        return cls.social_accounts[app][len].username
