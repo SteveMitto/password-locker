@@ -212,9 +212,9 @@ def main():
                             else :
                                 print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
                                 for i in range(length):
-                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
-                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
-                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+                                    print(f"\t\t{i+1}.Username ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\t  Email    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\t  Password ...{cri.social_accounts[app][int(i)-1].password}\n")
 
                     if res == 'twis':
                         password = getpass.getpass("Please Enter your password to see cridentials\n")
@@ -229,10 +229,9 @@ def main():
                             else :
                                 print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
                                 for i in range(length):
-                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
-                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
-                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
-
+                                    print(f"\t\t{i+1}.Username ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\t  Email    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\t  Password ...{cri.social_accounts[app][int(i)-1].password}\n")
                     if res == 'fbs':
                         password = getpass.getpass("Please Enter your password to see cridentials\n")
                         if password != acc.accounts_list[0].password:
@@ -246,9 +245,9 @@ def main():
                             else :
                                 print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
                                 for i in range(length):
-                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
-                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
-                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+                                    print(f"\t\t{i+1}.Username ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\t  Email    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\t  Password ...{cri.social_accounts[app][int(i)-1].password}\n")
 
                     if res == 'lis':
                         password = getpass.getpass("Please Enter your password to see cridentials\n")
@@ -263,9 +262,9 @@ def main():
                             else :
                                 print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
                                 for i in range(length):
-                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
-                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
-                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+                                    print(f"\t\t{i+1}.Username ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\t  Email    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\t  Password ...{cri.social_accounts[app][int(i)-1].password}\n")
 
                     if res == 'snaps':
                         password = getpass.getpass("Please Enter your password to see cridentials\n")
@@ -280,9 +279,9 @@ def main():
                             else :
                                 print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
                                 for i in range(length):
-                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
-                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
-                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+                                    print(f"\t\t{i+1}.Username ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\t  Email    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\t  Password ...{cri.social_accounts[app][int(i)-1].password}\n")
 
                     if res == 'gits':
                         password = getpass.getpass("Please Enter your password to see cridentials\n")
@@ -297,9 +296,9 @@ def main():
                             else :
                                 print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
                                 for i in range(length):
-                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
-                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
-                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+                                    print(f"\t\t{i+1}.Username ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\t  Email    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\t  Password ...{cri.social_accounts[app][int(i)-1].password}\n")
 
                     if res == 'gms':
                         password = getpass.getpass("Please Enter your password to see cridentials\n")
@@ -314,9 +313,9 @@ def main():
                             else :
                                 print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
                                 for i in range(length):
-                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
-                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
-                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
+                                    print(f"\t\t{i+1}.Username ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\t  Email    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\t  Password ...{cri.social_accounts[app][int(i)-1].password}\n")
 
                     if res == 'yhs':
                         password = getpass.getpass("Please Enter your password to see cridentials\n")
@@ -331,9 +330,10 @@ def main():
                             else :
                                 print(f"\n\t\t {app.upper()} CRIDENTIALS\n")
                                 for i in range(length):
-                                    print(f"\t\tUsername ...{cri.social_accounts[app][int(i)-1].username}")
-                                    print(f"\t\tEmail    ...{cri.social_accounts[app][int(i)-1].email}")
-                                    print(f"\t\tPassword ...{cri.social_accounts[app][int(i)-1].password}\n")
-            print("________________________________invalid responce________________________________")
+                                    print(f"\t\t{i+1}.Username ...{cri.social_accounts[app][int(i)-1].username}")
+                                    print(f"\t\t  Email    ...{cri.social_accounts[app][int(i)-1].email}")
+                                    print(f"\t\t  Password ...{cri.social_accounts[app][int(i)-1].password}\n")
+    else:
+        print("________________________________invalid responce________________________________")
 if __name__ == "__main__":
     main()
